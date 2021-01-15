@@ -367,6 +367,7 @@ export default class InlineSVG extends React.PureComponent<Props, State> {
       'description',
       'innerRef',
       'loader',
+      'onClick',
       'onError',
       'onLoad',
       'preProcessor',

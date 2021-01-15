@@ -2,6 +2,7 @@ import * as React from 'react';
 
 type Callback = (...args: any[]) => void;
 
+export type OnClickCallback = (...args: any) => void;
 export type ErrorCallback = (error: Error | FetchError) => void;
 export type LoadCallback = (src: string, isCached: boolean) => void;
 export type PlainObject<T = unknown> = Record<string | number | symbol, T>;
@@ -14,6 +15,7 @@ export interface Props extends Omit<React.SVGProps<SVGElement>, 'onLoad' | 'onEr
   description?: string;
   innerRef?: React.Ref<SVGElement>;
   loader?: React.ReactNode;
+  onClick?: OnClickCallback;
   onError?: ErrorCallback;
   onLoad?: LoadCallback;
   preProcessor?: PreProcessorCallback;
